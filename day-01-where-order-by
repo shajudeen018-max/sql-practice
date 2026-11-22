@@ -1,0 +1,16 @@
+-- Day 1: WHERE, AND, ORDER BY, YEAR()
+
+SELECT * FROM Sales
+WHERE Amount > 15000
+ORDER BY Amount DESC;
+
+SELECT * FROM Sales
+WHERE GeoID = 'G1'
+ORDER BY PID, Amount DESC;
+
+SELECT * FROM Sales
+WHERE Amount > 10000 AND SaleDate >= '2022-01-01';
+
+SELECT SaleDate, Amount FROM Sales
+WHERE Amount > 10000 AND YEAR(SaleDate) = '2022'
+ORDER BY Amount DESC;
